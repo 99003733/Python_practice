@@ -30,7 +30,7 @@ def search_data():
         for f_name in os.listdir(path):
             if f_name.endswith('.xlsx'):
                 more_se.append(f_name)
-        more_se.extend(list_files)
+        list_files.extend(more_se)
         print('Wanna search more?????...')
         ans_more = input()
         if ans_more.lower() == 'no':
