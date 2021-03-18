@@ -25,7 +25,11 @@ def search_data():
     print('Wanna search more?????...')
     ans_more = input()
     while ans_more.lower() == 'yes':
-        more_se = search_data()
+        path = input()
+        more_se = []
+        for f_name in os.listdir(path):
+            if f_name.endswith('.xlsx'):
+                more_se.append(f_name)
         more_se.extend(list_files)
         print('Wanna search more?????...')
         ans_more = input()
